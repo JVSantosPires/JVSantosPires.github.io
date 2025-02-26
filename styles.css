@@ -1,0 +1,213 @@
+ /* Reset básico */
+body, p, h1, h2 {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden; /* Remove qualquer scroll horizontal */
+}
+
+/* Paleta de cores */
+:root {
+    --navy-blue: #001F3F;
+    --firebrick: #B22222;
+    --black: #000;
+    --white: #fff;
+    --gold: #FFD700;
+}
+
+/* Configuração geral */
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Títulos */
+h2 {
+    font-size: 30px;
+    color: var(--gold);
+}
+
+/* Navbar */
+#navbar {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar img {
+    height: 60px;
+    border-radius: 10px;
+    position:absolute;
+}
+
+#navbar h2 {
+    margin-left: 100px;
+}
+
+#navbar nav {
+    float: right;
+}
+
+#navbar ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+#navbar-list li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#navbar-list a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+#navbar-list li a:hover {
+    color: var(--gold);
+    text-shadow: 0px 0px 10px var(--gold);
+}
+
+/* Banner */
+#banner {
+    width: 110%;
+    height: 1000px;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sobre Mim */
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* Seção Habilidades */
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+.skills-item {
+    background: var(--navy-blue);
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--gold);
+    text-align: center;
+}
+
+/* Cursos */
+.curse {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+.curse-item {
+    text-align: center;
+    width: 200px;
+}
+
+.curse-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.curse-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px var(--gold);
+}
+
+/* Contato */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--firebrick);
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+.curses{
+    display: flex;
+    gap: 20px;
+}
+.curseimg{
+    width: 200px;
+    background-color: #000;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.curses:nth-child(2){
+    transition-delay: 400ms;
+}
+
+.curses:nth-child(3){
+    transition-delay: 700ms;
+}
+
+.curses:nth-child(4){
+    transition-delay: 1000ms;
+}
